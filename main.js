@@ -38,6 +38,7 @@ function main () {
    
    const game = new Game(canvasElement);
    game.startLoop();
+   game.setGameOverCallback(buildGameOverScreen);
    document.addEventListener('keydown', function (){
      console.log(event.keyCode);
      if (event.keyCode === 38){
@@ -51,7 +52,7 @@ function main () {
       game.player.setDirection(0);
     } 
    })
-   //setTimeout (buildGameOverScreen, 3000);
+   //setTimeout (buildGameOverScreen, 3000); // to test if the screens are connected 
 
   }
 
