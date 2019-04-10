@@ -35,8 +35,11 @@ function main () {
    const canvasElement = document.querySelector('canvas');
    canvasElement.setAttribute('width', width);
    canvasElement.setAttribute('height', height);
-
+   
+   const game = new Game(canvasElement);
+   game.startLoop();
    setTimeout (buildGameOverScreen, 3000);
+
   }
 
   function buildGameOverScreen() {
